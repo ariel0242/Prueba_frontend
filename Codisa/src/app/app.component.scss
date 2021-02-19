@@ -22,7 +22,7 @@ a {
 }
 
 .img-zise {
-  height: 20rem;
+  height: 30rem;
   width: 5rem;
 }
 
@@ -31,6 +31,7 @@ a {
   display: block;
   margin: auto;
 }
+
 
 .custom-button-map {
   background-image: url('../assets/map.jpg') !important;
@@ -97,15 +98,39 @@ a {
   width: 100%;
 }
 
-.logo
-{
-    background-image: url('../assets/logo.svg');
-    background-size: 100% auto;
-    height: 2rem;
-    width: 2rem;
-    background-repeat: no-repeat;
+.logo {
+  background-image: url('../assets/logo.svg');
+  background-size: 100% auto;
+  height: 2rem;
+  width: 2rem;
+  background-repeat: no-repeat;
 }
 
-::ng-deep .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{
-    display: none!important;
+::ng-deep .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+  display: none !important;
+}
+
+::ng-deep .mat-tab-label {
+
+  font-size: 16px !important;
+  white-space: normal !important;
+  background-color: transparent;
+  color: #218838 !important;
+  opacity: 1 !important;
+}
+
+/* Styles for the active tab label */
+::ng-deep .mat-tab-label.mat-tab-label-active {
+
+  font-size: 16px !important;
+  white-space: normal !important;
+  background-color: #218838 !important;
+  color: #fff !important;
+}
+
+
+::ng-deep .mat-ink-bar {
+  background-color: #218838  !important;
+  height: 10rem;
+  z-index: -1;
 }

@@ -10,6 +10,11 @@ import { ApartmentsServiceService } from '../app/shared/apartments-service.servi
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  /******************************************************
+    * Author: lbolanos
+    * Creation date: 18/02/2021
+    * Description: variables de la clase
+    *******************************************************/
   private unsubscribe$ = new Subject<void>();
   title = 'Codisa';
   public lat: number = 10.057947;
@@ -19,8 +24,17 @@ export class AppComponent implements OnInit {
   datatemp: string;
   ID: any = 1;
   imageActive: any;
+  /******************************************************
+   * Author: lbolanos
+   * Creation date: 18/02/2021
+   * Description: constructor de la clase
+   *******************************************************/
   constructor(private apartmentsServiceService: ApartmentsServiceService) { }
-
+  /******************************************************
+     * Author: lbolanos
+     * Creation date: 18/02/2021
+     * Description: metodo que arranca la pagina
+     *******************************************************/
   ngOnInit(): void {
     this.listAppartmentInformation();
     this.listImagesPage(0);
@@ -31,7 +45,7 @@ export class AppComponent implements OnInit {
   /******************************************************
      * Author: lbolanos
      * Creation date: 18/02/2021
-     * Description: Method to list the appartment information
+     * Description: metodo que lista la informacion de los apartamentos
      *******************************************************/
   listAppartmentInformation() {
 
@@ -50,7 +64,7 @@ export class AppComponent implements OnInit {
   /******************************************************
      * Author: lbolanos
      * Creation date: 18/02/2021
-     * Description: Method to list the images of the page
+     * Description: metodo que lista las imagenes
      *******************************************************/
   listImagesPage(number) {
     this.apartmentsServiceService._listImagesPage(String(number)).pipe(takeUntil(this.unsubscribe$)).subscribe(
@@ -59,8 +73,8 @@ export class AppComponent implements OnInit {
         this.dataImages = data;
         console.log(this.dataImages.images)
         this.dataImages = this.dataImages.images;
-        debugger
-        this.imageActive =  this.dataImages[0]; 
+
+        this.imageActive = this.dataImages[0];
         console.log(this.imageActive)
       }, error => {
 
@@ -70,16 +84,16 @@ export class AppComponent implements OnInit {
   /******************************************************
       * Author: lbolanos
       * Creation date: 18/02/2021
-      * Description: Method that slide the appartment catalog
+      * Description: Method que asigna el slide que se debe ver y la imagen que se debe mostrar
       *******************************************************/
   goToNextCatalog(appartmentId) {
     if (appartmentId + 1 == 6) {
       this.ID = 1;
       appartmentId = 1;
-      this.listImagesPage(this.ID-1);
+      this.listImagesPage(this.ID - 1);
     } else {
       this.ID = appartmentId + 1;
-      this.listImagesPage(this.ID-1);
+      this.listImagesPage(this.ID - 1);
     }
 
   }
