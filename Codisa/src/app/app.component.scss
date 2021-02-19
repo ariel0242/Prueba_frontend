@@ -1,0 +1,111 @@
+.container-fluid {
+
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  background-color: rgb(204, 204, 204);
+}
+
+.container-bg {
+  background-color: gray;
+}
+
+a {
+  color: #5b5c5d !important;
+}
+
+.nav-pills {
+  justify-content: center;
+  -webkit-box-shadow: 1px 3px 9px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 3px 9px 0px rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+}
+
+.img-zise {
+  height: 20rem;
+  width: 5rem;
+}
+
+::ng-deep .mat-tab-header {
+  justify-content: center;
+  display: block;
+  margin: auto;
+}
+
+.custom-button-map {
+  background-image: url('../assets/map.jpg') !important;
+  background-size: 100% auto;
+  height: 5rem;
+  width: 9rem;
+}
+
+.overlay {
+  width: 5rem;
+  height: 9rem;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: fixed;
+  // top: 0;
+}
+
+.number {
+  font-size: 27px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.title {
+  color: rgb(59, 180, 236);
+}
+
+.section-description {
+  background-color: #cccccc;
+}
+
+.mat-card {
+  padding: 0rem !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+.section-propetries {
+  background-color: #fff !important;
+  justify-content: center;
+  display: block;
+  margin: auto;
+  //text-align: center;
+  border-radius: 0.9rem;
+  margin-bottom: 1rem;
+  width: 95% !important;
+
+}
+
+.icon-color {
+  color: rgb(59, 180, 236);
+}
+
+::ng-deep .mat-tab-body-content {
+  background-color: #cccccc !important;
+}
+
+
+.map-dimentions {
+
+  height: 31.5rem;
+  width: 100%;
+}
+
+.logo
+{
+    background-image: url('../assets/logo.svg');
+    background-size: 100% auto;
+    height: 2rem;
+    width: 2rem;
+    background-repeat: no-repeat;
+}
+
+::ng-deep .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{
+    display: none!important;
+}
